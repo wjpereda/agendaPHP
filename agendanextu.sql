@@ -31,20 +31,11 @@ CREATE TABLE `eventos` (
   `emailUsuario` varchar(50) NOT NULL,
   `titEvento` varchar(50) NOT NULL,
   `finiEvento` date NOT NULL,
-  `hiniEvento` time NOT NULL,
-  `ffinEvento` date NOT NULL,
-  `hfinEvento` time NOT NULL,
-  `fullEvento` tinyint(1) NOT NULL
+  `hiniEvento` time NULL,
+  `ffinEvento` date NULL,
+  `hfinEvento` time NULL,
+  `fullEvento` tinyint(1) NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Volcado de datos para la tabla `eventos`
---
-
-INSERT INTO `eventos` (`idEvento`, `emailUsuario`, `titEvento`, `finiEvento`, `hiniEvento`, `ffinEvento`, `hfinEvento`, `fullEvento`) VALUES
-(14, 'wjpereda@hotmail.com', 'Entrega de Trabajo', '2019-01-23', '00:00:00', '0000-00-00', '00:00:00', 1);
-
--- --------------------------------------------------------
 
 --
 -- Estructura de tabla para la tabla `usuarios`
@@ -57,18 +48,6 @@ CREATE TABLE `usuarios` (
   `fnacUsuario` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Volcado de datos para la tabla `usuarios`
---
-
-INSERT INTO `usuarios` (`emailUsuario`, `nomUsuario`, `pswUsuario`, `fnacUsuario`) VALUES
-('pquispe@hotmail.com', 'Paola Quispe Bolivar', 'e10adc3949ba59abbe56e057f20f883e', '1973-09-26'),
-('rvalencia@hotmail.com', 'Richard Valencia Rojas', 'e10adc3949ba59abbe56e057f20f883e', '1974-03-15'),
-('wjpereda@hotmail.com', 'William Pereda Pinazo', 'e10adc3949ba59abbe56e057f20f883e', '1972-12-20');
-
---
--- Índices para tablas volcadas
---
 
 --
 -- Indices de la tabla `eventos`
@@ -82,15 +61,6 @@ ALTER TABLE `eventos`
 ALTER TABLE `usuarios`
   ADD PRIMARY KEY (`emailUsuario`);
 
---
--- AUTO_INCREMENT de las tablas volcadas
---
-
---
--- AUTO_INCREMENT de la tabla `eventos`
---
-ALTER TABLE `eventos`
-  MODIFY `idEvento` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
